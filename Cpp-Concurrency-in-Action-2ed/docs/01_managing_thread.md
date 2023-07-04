@@ -26,7 +26,7 @@ struct A {
 
 int main() {
   A a;
-  std::thread t1(a);  // 会调用 A 的拷贝构造函数
+  std::thread t1(a);    // 会调用 A 的拷贝构造函数
   std::thread t2(A());  // most vexing parse，声明名为 t2 参数类型为 A 的函数
   std::thread t3{A()};
   std::thread t4((A()));
